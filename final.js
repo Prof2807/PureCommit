@@ -8,4 +8,8 @@ console.log("keeping log");
     // indent comment
 
 
+    // debUg another comment
+
+    console.log(`The number is: ${num}`); // fun
+
 
