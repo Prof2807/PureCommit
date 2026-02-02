@@ -1,7 +1,3 @@
-let API_KEY = 'pk_test_51H8jY2SDb5KJf3...';
+let yo ='yo'
 
-console.log("Final PureCommit version running with API Key:" ) 
-
-console.log("Keep" , API_KEY)
-// comment  sa
-
+console.log("Keep")
