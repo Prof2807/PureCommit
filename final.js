@@ -4,12 +4,9 @@ let num = 24
 
 console.log("keeping log");
 
-    console.log("indented log");
+    console.log("updated log");
     // indent comment
-
 
     // debUg another comment
 
     console.log(`The number is: ${num}`); // fun
-
-
