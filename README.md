@@ -85,29 +85,31 @@ Whether you write `//debug` or `//   debug`, PureCommit will find it and clean i
   </div>
 
   <div style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; margin-bottom: 16px; border: 1px solid #d0d7de;">
-    <h4 style="margin-top: 0; color: #24292f;">3️⃣ Automatic Mode (Recommended)</h4>
-    <p style="color: #24292f;">Automate your workflow by setting up a <b>Pre-commit Hook</b>:</p>
+    <h4 style="margin-top: 0;">3️⃣ Automatic Mode (Recommended)</h4>
+    <p>Automate your workflow by setting up a <b>Pre-commit Hook</b>:</p>
     <pre style="background-color: #0d1117; color: #e6edf3; padding: 12px; border-radius: 6px; overflow: auto;"><code>npx purecommit</code></pre>
     
-    <p>When prompted with:</p>
-    <blockquote style="border-left: 4px solid #afb8c1; padding-left: 16px; margin: 10px 0; opacity: 0.8;">
-      <i>"Husky hook not found. Do you want to set PureCommit as a pre-commit hook? (y/n)"</i>
-    </blockquote>
-    
-    <table width="100%" style="border-collapse: collapse; margin-top: 10px; background-color: transparent;">
-      <tr>
-        <td style="padding: 10px; border: 1px solid #d0d7de;"><b>If you choose <kbd>y</kbd></b></td>
-        <td style="padding: 10px; border: 1px solid #d0d7de;"><b>Automation:</b> PureCommit runs quietly every time you <code>git commit</code>.</td>
-      </tr>
-      <tr>
-        <td style="padding: 10px; border: 1px solid #d0d7de;"><b>If you choose <kbd>n</kbd></b></td>
-        <td style="padding: 10px; border: 1px solid #d0d7de;"><b>Manual:</b> You must run the command manually to purify staged changes.</td>
-      </tr>
-    </table>
-    
-    <p align="center" style="font-size: 0.85em; color: #cf222e; margin-top: 15px;">
-      ⚠️ <b>Important:</b> Automatic setup requires an initialized Git repository. Run <code>git init</code> first.
-    </p>
+    <div>
+      <p>When prompted with:</p>
+      <blockquote style="border-left: 4px solid #afb8c1; padding-left: 16px; margin: 10px 0; opacity: 0.8;">
+        <i>"Husky hook not found. Do you want to set PureCommit as a pre-commit hook? (y/n)"</i>
+      </blockquote>
+
+      <table width="100%" style="border-collapse: collapse; margin-top: 10px; background-color: transparent;">
+        <tr>
+          <td style="padding: 10px; border: 1px solid #d0d7de;"><b>If you choose <kbd>y</kbd></b></td>
+          <td style="padding: 10px; border: 1px solid #d0d7de;"><b>Automation:</b> PureCommit runs quietly every time you <code>git commit</code>.</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #d0d7de;"><b>If you choose <kbd>n</kbd></b></td>
+          <td style="padding: 10px; border: 1px solid #d0d7de;"><b>Manual:</b> You must run the command manually to purify staged changes.</td>
+        </tr>
+      </table>
+
+      <p align="center" style="font-size: 0.85em; color: #cf222e; margin-top: 15px;">
+        ⚠️ <b>Important:</b> Automatic setup requires an initialized Git repository. Run <code>git init</code> first.
+      </p>
+    </div>
   </div>
 </section>
 
