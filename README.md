@@ -43,17 +43,26 @@
 
 ---
 
-### 🛠 How It Works
+### 🛠 How It Works & Edge Cases
 
-PureCommit intercepts your files as they are being committed. It creates a "purified" version of your code for the repository while leaving your actual physical files on your computer alone.
+PureCommit is designed to be highly flexible. It uses smart regex to ensure it doesn't accidentally delete code you actually need.
 
-#### **The Rules:**
+#### **1. Case Insensitivity**
+The tool doesn't care about your casing. 
+- `// DEBUG`, `// Debug`, and `// debug` are all treated the same and removed.
+- `// KEEP`, `// Keep`, and `// keep` all successfully preserve your logs.
 
-> ❌ **Purified:** `console.log("Testing...");` ➔ *Removed from commit*
-> 
-> ❌ **Purified:** `const x = 10; // debug: check value` ➔ *Removed from commit*
-> 
-> ✅ **Preserved:** `console.log("App Started"); // keep` ➔ *Kept in commit (tag is stripped)*
+#### **2. Flexible Spacing**
+Whether you write `//debug` or `//   debug`, PureCommit will find it and clean it.
+
+#### **3. The Rules in Action:**
+
+| Code Example | Action | Result in Commit |
+| :--- | :--- | :--- |
+| `console.log("Check this");` | ❌ **Remove** | *Deleted* |
+| `const x = 5; // DEBUG` | ❌ **Remove** | `const x = 5;` |
+| `console.info("Vital Info"); // keep` | ✅ **Keep** | `console.info("Vital Info");` |
+| `// TODO: fix this debug log` | 🛡️ **Ignore** | *Stays exactly as is* |
 
 ---
 
